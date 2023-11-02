@@ -19,7 +19,7 @@ public class Prime {
 		num = new int[size];
 		for (int i = 0; i < num.length; i++) {
 
-			System.out.println("please enter the elements ");
+			System.out.println("please enter " + (i + 1) + "the elements ");
 			num[i] = sc.nextInt();
 
 		}
@@ -29,23 +29,29 @@ public class Prime {
 	}
 
 	public static void prime(int num[]) {
-		int prime=0;
+		boolean status = true;
+		System.out.println("the prime number are:");
+		{
+			
+			int i = 0;
 
-		
-		for(int i=0;i<num.length;i++) {
-			boolean isPrime=true;
-			for (int i1=2;i1>i1;i1++) {
-				if(i1%i==0) {
-					isPrime=true;
-					break;
+			if ((num[i] == 0 || (num[i] == 1))) {
+				System.out.println("0 and 1 are not prime");
+				
+			} else {
+				for (int j = 2; j < num[i]; j++) {
+					if (num[i] % j == 0) {
+						status = false;
+					} else
+						status = true;
 				}
 			}
+			if (status)
 				System.out.println(num[i]);
-		}
-		
-		System.out.println("prime of array " + prime);
 
-}
+		}
+	}
+
 	public static void main(String[] args) {
 		int n[] = createArray();
 		showElement(n);
