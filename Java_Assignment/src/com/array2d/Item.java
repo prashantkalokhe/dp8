@@ -35,9 +35,9 @@ class Supplier {
         }
         System.out.println();
     }
-}
 
-public class SupplierItemAssociation {
+
+public static class SupplierItemAssociation {
     public static void main(String[] args) {
         // Create two arrays of Item
         Item[] itemsSupplier1 = new Item[5];
@@ -61,5 +61,7 @@ public class SupplierItemAssociation {
         // Task 2: Show item details supplied by each supplier
         supplier1.displaySuppliedItems();
         supplier2.displaySuppliedItems();
+        
     }
+}
 }

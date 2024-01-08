@@ -41,7 +41,7 @@ public class AverageandDivisibility {
 	public static void even(int num[]) {
 		int even=0;
 		for(int i=0;i<num.length;i++) {
-			if(num[i]%2==0)
+			if((num[i]%2==0)&&(num[i]%3==0))
 				System.out.println(num[i]);
 		}	
 		System.out.println("even of array " + even);

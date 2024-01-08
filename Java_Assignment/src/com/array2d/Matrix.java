@@ -1,5 +1,6 @@
 package com.array2d;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 class Matrix {
@@ -30,36 +31,10 @@ class Matrix {
 
         return ((double) zeroCount / totalElements) > sparsityThreshold;
     }
+
+	@Override
+	public String toString() {
+		return "Matrix [data=" + Arrays.toString(data) + "]";
+	}
 }
 
-public class SparseMatrixChecker {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Input the matrix dimensions
-        System.out.print("Enter the number of rows: ");
-        int rows = scanner.nextInt();
-        System.out.print("Enter the number of columns: ");
-        int columns = scanner.nextInt();
-
-        Matrix matrix = new Matrix(rows, columns);
-
-        // Input matrix elements
-        System.out.println("Enter matrix elements:");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
-                int value = scanner.nextInt();
-                matrix.setElement(i, j, value);
-            }
-        }
-
-        // Check if the matrix is sparse
-        if (matrix.isSparseMatrix()) {
-            System.out.println("Sparse");
-        } else {
-            System.out.println("Not sparse");
-        }
-
-        scanner.close();
-    }
-}

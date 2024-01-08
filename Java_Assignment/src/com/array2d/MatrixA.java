@@ -29,9 +29,9 @@ public class MatrixA {
 
         return diagonalSum;
     }
-}
 
-public class MainDiagonalSumUsingObjects {
+
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -48,7 +48,7 @@ public class MainDiagonalSumUsingObjects {
 
         MatrixA matrix = new MatrixA(rows, columns);
 
-        // Input matrix elements
+        // Input matrix\ elements
         System.out.println("Enter matrix elements:");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
